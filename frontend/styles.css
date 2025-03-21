@@ -15,7 +15,18 @@ header {
     align-items: center;
     padding: 15px 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #FFFFFF; /* Línea divisoria visible */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    z-index: 1000;
 }
+
+main {
+    margin-top: 80px; /* Ajusta este valor según la altura del header */
+}
+
 
 /* Logo alineado a la izquierda */
 .logo {
@@ -51,7 +62,7 @@ nav {
 .menu a {
     text-decoration: none;
     color: #BFC0C0;
-    font-size: 16px;
+    font-size: 18px;
     transition: color 0.3s;
 }
 
@@ -98,9 +109,133 @@ nav {
 
 /* Imagen en la derecha */
 .imagen img {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     border-radius: 10px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    text-align: center; /* Centrar el título */
+}
+
+/* Título (h1) centrado arriba */
+.titulo2 {
+    font-size: 28px;
+    color: #FFFFFF;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Espacio entre el título y el contenido */
+}
+
+/* Contenedor de imagen y texto en columnas */
+.contenido {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Centrar en la pantalla */
+    gap: 50px; /* Espaciado entre la imagen y el texto */
+}
+
+/* Imagen alineada a la izquierda */
+.imagen2 img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Contenedor del texto */
+.texto2 {
+    width: 50%;
+    text-align: right; /* Alinear el texto a la izquierda */
+}
+
+/* Estilos para el párrafo */
+.texto2 p {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.4;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #BFC0C0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Logo en el footer */
+.footer-logo img {
+    width: 120px;
+}
+
+/* Enlaces rápidos y contacto */
+.footer-links, .footer-contacto, .footer-social {
+    width: 25%;
+    min-width: 200px;
+}
+
+/* Títulos de secciones */
+.footer-links h3, .footer-contacto h3, .footer-social h3 {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Lista de enlaces */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #BFC0C0;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #0077B6;
+}
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Línea inferior del footer */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding: 10px 0;
 }
 
 /* Responsividad */
@@ -127,5 +262,15 @@ nav {
     nav {
         justify-content: center;
         flex: unset;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links, .footer-contacto, .footer-social {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
