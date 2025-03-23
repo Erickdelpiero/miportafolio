@@ -142,7 +142,7 @@ nav {
 /* Imagen alineada a la izquierda */
 .imagen2 img {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     border-radius: 10px;
 }
 
