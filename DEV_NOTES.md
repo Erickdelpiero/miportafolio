@@ -1,3 +1,6 @@
+Note (0325V2)
+- Se movió index.html a root para que funciones en github page.
+
 Note (0325V1)
 - Se agregó modificaciones para que sea maś responsive.
 
