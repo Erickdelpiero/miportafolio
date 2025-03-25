@@ -1,3 +1,6 @@
+Note (0325V1)
+- Se agregó modificaciones para que sea maś responsive.
+
 Note (0325V0)
 - Se redujo el CSS a un solo archivo para facilidad de manejo (styles.css)
 - Todos los HTML llaman a styles.css

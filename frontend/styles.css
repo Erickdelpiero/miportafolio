@@ -221,7 +221,7 @@ nav { /*Mantiene el menú alineado a la derecha*/
 .input-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -330,6 +330,10 @@ footer {
         width: 100%;
     }
 
+    .parrafo {
+        width: 70%; /*Ancho del bloque de texto*/
+    }
+
     header {
         flex-direction: column;
         align-items: center;
@@ -338,6 +342,10 @@ footer {
     nav {
         justify-content: center;
         flex: unset;
+    }
+
+    .parrafo p {
+        font-size: 20px; /*Tamaño*/
     }
 
     .footer-container {
@@ -352,7 +360,7 @@ footer {
 
     .contact-container {
         width: 90%;
-        padding: 15px;
+        padding: 30px;
     }
     .contact-container h1 {
         font-size: 24px;
