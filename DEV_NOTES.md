@@ -1,3 +1,9 @@
+Note (0325V0)
+- Se redujo el CSS a un solo archivo para facilidad de manejo (styles.css)
+- Todos los HTML llaman a styles.css
+- Algunos texto e imágenes son preliminares.
+- Se espera feedback a ver si hay modificaciones estéticas y de flow que modificar.
+
 Note (0322V1)
 - Se siguió completando algunas páginas, pero aún no están terminadas.
 - Las imágenes son de prueba no son definitivas.
