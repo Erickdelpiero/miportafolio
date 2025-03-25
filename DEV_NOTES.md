@@ -1,3 +1,7 @@
+Note (0325V3)
+- Se reorganizó los enlaces por la modificación de index.html
+- Se eliminó de gitignore a los imágenes y fotos.
+
 Note (0325V2)
 - Se movió index.html a root para que funciones en github page.
 
