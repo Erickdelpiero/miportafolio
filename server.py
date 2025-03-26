@@ -6,7 +6,7 @@ import os
 PORT = 8000
 
 # Definir el directorio donde se encuentran los archivos a servir
-DIRECTORY = "frontend"
+DIRECTORY = "."
 
 # Clase personalizada para manejar las solicitudes HTTP
 class CustomHandler(http.server.SimpleHTTPRequestHandler):

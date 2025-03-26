@@ -1,3 +1,7 @@
+Note (0326V0)
+- Se arregló algunos enlaces faltantes.
+- Se corrigió el archivo server.py para ejecutarse en la nueva ubicación del index.html
+
 Note (0325V3)
 - Se reorganizó los enlaces por la modificación de index.html
 - Se eliminó de gitignore a los imágenes y fotos.
