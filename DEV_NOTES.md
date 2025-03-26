@@ -1,3 +1,8 @@
+Note (0326V1)
+- Se mejoró el responsive.
+- Se arregló más enlaces faltantes.
+- Esta versión se compartirá para recibir feedback.
+
 Note (0326V0)
 - Se arregló algunos enlaces faltantes.
 - Se corrigió el archivo server.py para ejecutarse en la nueva ubicación del index.html

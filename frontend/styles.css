@@ -18,7 +18,7 @@ header {
     border-bottom: 2px solid #ffffff; /*Línea blanca debajo de la cabecera*/
     position: fixed; /*Fija la cabecera en la parte superior de la pantalla*/
     top: 0;
-    left: 0;
+    right: 0;
     width: 95%; /*Ancho de la pantalla que ocupa la cabecera*/
     z-index: 1000; /*Se asegura de que la cabecera esté sobre otros elementos*/
 }
@@ -37,6 +37,7 @@ main {
 .logo img {/*Asegura que la imagen del logo tenga un alto fijo y un ancho ajustable.*/
     height: 50px;
     width: auto;
+    padding-left: 10px;
 }
 
 /*Menú de Navegación*/
@@ -53,12 +54,14 @@ nav { /*Mantiene el menú alineado a la derecha*/
     display: flex; /*Lo ordena en una sola fila*/
     gap: 20px; /*Espacio entre palabras*/
     margin: 0; /*Margen*/
-    padding: 0; /*Espacio desde el margen*/
+    padding: 5px; /*Espacio desde el margen*/
     align-items: center;
 }
 
 .menu li {
     display: inline; /*Se pone en una sola línea todo*/
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
 }
 
 .menu a {
@@ -66,6 +69,7 @@ nav { /*Mantiene el menú alineado a la derecha*/
     color: #c0bfbf; /*Color de letras del menú*/
     font-size: 18px; /*Tamaño de letra del menú*/
     transition: color 0.3s; /*Suaviza el cambio de color al pasar el mouse*/
+    align-items: center;
 }
 
 .menu a:not(.btn):hover {
@@ -81,7 +85,7 @@ nav { /*Mantiene el menú alineado a la derecha*/
 .btn {
     background-color: #0077B6;
     color: #FFFFFF;
-    padding: 8px 16px;
+    padding: 7px 12px;
     border-radius: 10px;
     text-decoration: none;
     transition: background 0.3s;
@@ -99,12 +103,13 @@ nav { /*Mantiene el menú alineado a la derecha*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px;
+    padding: 100px;
 }
 
 /* Texto en la izquierda */
 .texto {
-    width: 50%;
+    width: 57%;
+    margin: 10px;
 }
 
 .texto h1 {
@@ -315,28 +320,12 @@ footer {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .imagen img {
-        width: 100%;
-    }
-
-    .parrafo {
-        width: 70%; /*Ancho del bloque de texto*/
-    }
-
+@media (max-width: 850px) {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 5px 15px;
+        width: 95%;
     }
 
     nav {
@@ -344,8 +333,68 @@ footer {
         flex: unset;
     }
 
+    .menu { /*(align-items)*/
+        gap: 12px; /*Espacio entre palabras*/
+        padding: 25px; /*Espacio desde el margen*/
+    }
+    
+    .menu a {
+        font-size: 17px; /*Tamaño de letra del menú*/
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .texto {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .texto h1 {
+        font-size: 50px;
+    }
+    
+    .texto p {
+        font-size: 20px;
+    }
+
+    .imagen img {
+        width: 80%;
+        margin-top: 0;
+    }
+    
+    .imagenV img {
+        max-height: 450px; /*Alto máximo*/
+    }
+
+    .titulo {
+        font-size: 35px;
+        margin-bottom: 20px; /* Espacio entre el título y el contenido */
+    }
+
+    .contenedor {
+        padding-top: 80px;
+    }
+
+    .contenido {
+        flex-direction: column; /* Cambia la dirección a vertical (arriba-abajo) */
+        gap: 30px; /* Espacio entre texto e imagen */
+    }
+
+    .parrafo {
+        width: 90%; /*Ancho del bloque de texto*/
+        text-align: justify;
+    }
+
     .parrafo p {
         font-size: 20px; /*Tamaño*/
+    }
+
+    .parrafo a{
+        display:block;
     }
 
     .footer-container {
@@ -359,8 +408,8 @@ footer {
     }
 
     .contact-container {
-        width: 90%;
-        padding: 30px;
+        width: 80%;
+        padding-left: 20px;
     }
     .contact-container h1 {
         font-size: 24px;
