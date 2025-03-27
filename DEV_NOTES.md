@@ -1,3 +1,6 @@
+Note (0326V2)
+- Menu con botón hamburguesa en responsive.
+
 Note (0326V1)
 - Se mejoró el responsive.
 - Se arregló más enlaces faltantes.

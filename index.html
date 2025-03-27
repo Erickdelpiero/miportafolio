@@ -8,10 +8,16 @@
 </head>
 <body>
     <header>
+        <!-- Logo (se moverá a la derecha en responsive) -->
+        <div class="logo">
+            <a href="index.html"><img src="frontend/images/Logo.png"></a>
+        </div>
+
+        <!-- Botón hamburguesa (siempre visible en móvil) -->
+        <button class="hamburger-btn">☰</button>
+
+        <!-- Menú de navegación -->
         <nav>
-            <div class="logo">
-                <a href="index.html"><img src="frontend/images/Logo.png"></a>
-            </div>
             <ul class="menu">
                 <li><a href="index.html"><b>Inicio</b></a></li>
                 <li><a href="frontend/ia.html"><b>IA</b></a></li>
@@ -20,7 +26,9 @@
                 <li><a href="frontend/contact.html" class="btn"><b>Contacto</b></a></li>
             </ul>
         </nav>
+        
     </header>
+
     <main>
         <section class="hero">
             <div class="texto">
@@ -87,6 +95,7 @@
         </section>
 
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -124,5 +133,14 @@
         </div>
     </footer>
     
+    <script>
+        document.querySelector('.hamburger-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+            
+            // Cambia el ícono de ☰ a ✕ cuando está activo
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
 </body>
 </html>

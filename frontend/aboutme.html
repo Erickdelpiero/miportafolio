@@ -8,18 +8,25 @@
 </head>
 <body>
     <header>
+        <!-- Logo (se moverá a la derecha en responsive) -->
+        <div class="logo">
+            <a href="../index.html"><img src="images/Logo.png"></a>
+        </div>
+
+        <!-- Botón hamburguesa (siempre visible en móvil) -->
+        <button class="hamburger-btn">☰</button>
+
+        <!-- Menú de navegación -->
         <nav>
-            <div class="logo">
-                <a href="../index.html"><img src="images/Logo.png"></a>
-            </div>
             <ul class="menu">
                 <li><a href="../index.html"><b>Inicio</b></a></li>
                 <li><a href="ia.html"><b>IA</b></a></li>
                 <li><a href="modelos.html"><b>Modelos</b></a></li>
-                <li><a href="aboutme.html"><b>Sobre mí</b></a></li>
+                <li><a href="aboutme.html"><b>Sobre Mí</b></a></li>
                 <li><a href="contact.html" class="btn"><b>Contacto</b></a></li>
             </ul>
         </nav>
+        
     </header>
     <main>
         <section class="hero">
@@ -126,6 +133,14 @@
             <p>&copy; 2025 Portafolio IA. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
+    <script>
+        document.querySelector('.hamburger-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+            
+            // Cambia el ícono de ☰ a ✕ cuando está activo
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
 </body>
 </html>
