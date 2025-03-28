@@ -17,7 +17,9 @@ async function loadComponent(componentName, targetElementId) {
             updateHeaderLinks(); // 👈 Función para actualizar enlaces
             updateHeaderLogoLink(); // Función para actualizar link del logo header
             updateHeaderLogoImg(); // Función para actualizar el logo header
-
+            updateFooterLinks(); // Función para actualizar los links del footer
+            updateFooterLogoLink(); // Función para actualizar el link del logo
+            updateFooterLogoLinkSocial(); // Función para actualizar el link del social
         }
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
@@ -48,8 +50,51 @@ function updateHeaderLogoImg() {
     logoImages.forEach(img => {
         const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         img.src = `${basePath}${originalSrc}`;
-        console.log('Imagen del logo:');
-        console.log(img.src);
+    });
+}
+
+// Actualiza los enlaces del footer
+function updateFooterLinks() {
+    const menuLinks = document.querySelectorAll('.footer-links a');
+    menuLinks.forEach(link => {
+        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
+        link.href = `${basePath}${originalHref}`;
+    });
+}
+
+// Actualiza el enlace del logo del footer
+function updateFooterLogoLink() {
+    const menuLinks = document.querySelectorAll('.footer-logo a');
+    menuLinks.forEach(link => {
+        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
+        link.href = `${basePath}${originalHref}`;
+    });
+}
+
+// Actualiza el enlace del logo social del footer
+function updateFooterLogoLinkSocial() {
+    const menuLinks = document.querySelectorAll('.footer-social a');
+    menuLinks.forEach(link => {
+        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
+        link.href = `${basePath}${originalHref}`;
+    });
+}
+
+// Actualiza la imagen del logo del footer
+function updateFooterLogoImg() {
+    const logoImages = document.querySelectorAll('.logo img');
+    logoImages.forEach(img => {
+        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
+        img.src = `${basePath}${originalSrc}`;
+    });
+}
+
+// Actualiza la imagen del logo social del footer
+function updateFooterLogoSocialImg() {
+    const logoImages = document.querySelectorAll('.footer-social img');
+    logoImages.forEach(img => {
+        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
+        img.src = `${basePath}${originalSrc}`;
     });
 }
 
