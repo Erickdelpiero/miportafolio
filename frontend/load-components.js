@@ -19,7 +19,6 @@ async function loadComponent(componentName, targetElementId) {
             updateHeaderLogoImg(); // Función para actualizar el logo header
             updateFooterLinks(); // Función para actualizar los links del footer
             updateFooterLogoLink(); // Función para actualizar el link del logo
-            updateFooterLogoLinkSocial(); // Función para actualizar el link del social
         }
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
@@ -68,21 +67,19 @@ function updateFooterLogoLink() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
-    });
-}
-
-// Actualiza el enlace del logo social del footer
-function updateFooterLogoLinkSocial() {
-    const menuLinks = document.querySelectorAll('.footer-social a');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
+        console.log('Link del Logo');
+        console.log('basePath');
+        console.log(basePath);
+        console.log('originalHref');
+        console.log(originalHref);
+        console.log('link.href');
+        console.log(link.href);
     });
 }
 
 // Actualiza la imagen del logo del footer
 function updateFooterLogoImg() {
-    const logoImages = document.querySelectorAll('.logo img');
+    const logoImages = document.querySelectorAll('.footer-logo img');
     logoImages.forEach(img => {
         const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         img.src = `${basePath}${originalSrc}`;
