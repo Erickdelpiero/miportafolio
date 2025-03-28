@@ -27,6 +27,12 @@ function updateHeaderLinks() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
+        console.log('basePath')
+        console.log(basePath)
+        console.log('originalHref')
+        console.log(originalHref)
+        console.log('link.href')
+        console.log(link.href)
     });
 }
 
