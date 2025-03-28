@@ -48,6 +48,8 @@ function updateHeaderLogoImg() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
+        console.log('Imagen del logo:')
+        console.log(link.href)
     });
 }
 
