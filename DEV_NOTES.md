@@ -1,3 +1,9 @@
+Note (0327V0)
+- Se intercambio la posición del botón hamburquesa con el logo (responsive)
+- Se creó la carpeta pages para los html.
+- Se separó el Js para escuchar el click del botón hamburguesa.
+- Se crea el header y fooder dinámicamente gracias a load-components.js
+
 Note (0326V2)
 - Menu con botón hamburguesa en responsive.
 

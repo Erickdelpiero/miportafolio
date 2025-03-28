@@ -4,30 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/frontend/styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logo (se moverá a la derecha en responsive) -->
-        <div class="logo">
-            <a href="../index.html"><img src="images/Logo.png"></a>
-        </div>
+    <!-- Placeholder para el header -->
+    <div id="header-placeholder"></div>
 
-        <!-- Botón hamburguesa (siempre visible en móvil) -->
-        <button class="hamburger-btn">☰</button>
-
-        <!-- Menú de navegación -->
-        <nav>
-            <ul class="menu">
-                <li><a href="../index.html"><b>Inicio</b></a></li>
-                <li><a href="ia.html"><b>IA</b></a></li>
-                <li><a href="modelos.html"><b>Modelos</b></a></li>
-                <li><a href="aboutme.html"><b>Sobre Mí</b></a></li>
-                <li><a href="contact.html" class="btn"><b>Contacto</b></a></li>
-            </ul>
-        </nav>
-        
-    </header>
     <main>
         <section class="hero">
             <div class="texto">
@@ -38,7 +20,7 @@
                 <a href="modelos.html" class="btn">Empezar</a>
             </div>
             <div class="imagen">
-                <img src="images/IA1.jpg" alt="Imagen llamativa">
+                <img src="/frontend/images/IA1.jpg" alt="Imagen llamativa">
             </div>
         </section>
 
@@ -47,7 +29,7 @@
         
             <div class="contenido">
                 <div class="imagen">
-                    <img src="images/History.jpg" alt="Imagen introducción">
+                    <img src="/frontend/images/History.jpg" alt="Imagen introducción">
                 </div>
         
                 <div class="parrafo">
@@ -75,7 +57,7 @@
                 </div>
 
                 <div class="imagen">
-                    <img src="images/ClasificacionIA.jpeg" alt="Imagen introducción">
+                    <img src="/frontend/images/ClasificacionIA.jpeg" alt="Imagen introducción">
                 </div>
             </div>
         </section>
@@ -85,7 +67,7 @@
         
             <div class="contenido">
                 <div class="imagen">
-                    <img src="images/Applications2.webp" alt="Imagen introducción">
+                    <img src="/frontend/images/Applications2.webp" alt="Imagen introducción">
                 </div>
 
                 <div class="parrafo">
@@ -99,42 +81,13 @@
         </section>
 
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <a href="../index.html"><img src="images/Logo.png" alt="Logo"></a>
-            </div>
-    
-            <div class="footer-links">
-                <h3>Enlaces rápidos</h3>
-                <ul>
-                    <li><a href="ia.html">IA</a></li>
-                    <li><a href="modelos.html">Modelos</a></li>
-                    <li><a href="aboutme.html">Sobre mí</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-contacto">
-                <h3>Contacto</h3>
-                <p>Email: info@erickdelpiero.com</p>
-                <p>Teléfono: +51 987 654 321</p>
-                <p>Lima - Perú</p>
-            </div>
-    
-            <div class="footer-social">
-                <h3>Sígueme</h3>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/erickdelpiero/"><img src="images/linkedin.jpg" alt="LinkedIn"></a>
-                    <a href="https://www.youtube.com/@erickdelpierogr"><img src="images/Youtube.jpg" alt="Youtube"></a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <p>&copy; 2025 Portafolio IA. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+
+    <!-- Placeholder para el footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script para cargar componentes -->
+    <script src="/frontend/load-components.js"></script>
+
     <script>
         document.querySelector('.hamburger-btn').addEventListener('click', function() {
             const nav = document.querySelector('nav');

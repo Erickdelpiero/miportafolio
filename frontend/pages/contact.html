@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/frontend/styles.css"> <!-- Estilos específicos para el formulario -->
+</head>
+<body>
+    <!-- Placeholder para el header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="contact-container">
+            <h1>Contáctame</h1>
+            <p>Si tienes alguna consulta o deseas más información, completa el siguiente formulario.</p>
+            
+            <form action="#" method="post" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Placeholder para el footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script para cargar componentes -->
+    <script src="/frontend/load-components.js"></script>
+
+    <script>
+        document.querySelector('.hamburger-btn').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+            
+            // Cambia el ícono de ☰ a ✕ cuando está activo
+            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>
