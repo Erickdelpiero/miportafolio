@@ -1,3 +1,6 @@
+Note (0327V1)
+- Implementación de basepath en load-components.js
+
 Note (0327V0)
 - Se intercambio la posición del botón hamburquesa con el logo (responsive)
 - Se creó la carpeta pages para los html.

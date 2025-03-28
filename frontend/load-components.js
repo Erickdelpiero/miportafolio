@@ -1,18 +1,33 @@
-// Función para cargar un componente (header/footer) en un elemento del DOM
+// Configuración de rutas
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const repoName = 'miportafolio';
+const basePath = isLocal ? '/' : `/${repoName}/`;
+
 async function loadComponent(componentName, targetElementId) {
     try {
-        const response = await fetch(`/frontend/pages/components/${componentName}.html`);
+        const componentPath = `${basePath}frontend/pages/components/${componentName}.html`;
+        const response = await fetch(componentPath);
+        
+        if (!response.ok) throw new Error(`Error ${response.status}`);
         const html = await response.text();
         document.getElementById(targetElementId).innerHTML = html;
 
-        // 👇 Añade esto solo para el header
         if (componentName === 'header') {
             setupHamburgerMenu();
+            updateHeaderLinks(); // 👈 Nueva función para actualizar enlaces
         }
-
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
     }
+}
+
+// Actualiza los enlaces del header
+function updateHeaderLinks() {
+    const menuLinks = document.querySelectorAll('.menu a');
+    menuLinks.forEach(link => {
+        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
+        link.href = `${basePath}${originalHref}`;
+    });
 }
 
 // Función para configurar el botón hamburguesa

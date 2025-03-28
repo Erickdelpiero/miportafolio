@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio IA</title>
-    <link rel="stylesheet" href="/frontend/styles.css">
+    <link rel="stylesheet" href="frontend/styles.css">
 </head>
 <body>
     <!-- Placeholder para el header -->
@@ -15,7 +15,7 @@
             <div class="texto">
                 <h1>Aprende<br>Innova<br>Transforma</h1>
                 <p>La inteligencia artificial a tus servicios</p>
-                <a href="/frontend/pages/modelos.html" class="btn">Empezar</a>
+                <a href="./frontend/pages/modelos.html" class="btn">Empezar</a>
             </div>
             <div class="imagen">
                 <img src="frontend/images/Imagen1.jpg" alt="Imagen llamativa">
@@ -81,16 +81,7 @@
     <div id="footer-placeholder"></div>
 
     <!-- Script para cargar componentes -->
-    <script src="/frontend/load-components.js"></script>
+    <script src="frontend/load-components.js"></script>
     
-    <script>
-        document.querySelector('.hamburger-btn').addEventListener('click', function() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-            
-            // Cambia el ícono de ☰ a ✕ cuando está activo
-            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
-        });
-    </script>
 </body>
 </html>
