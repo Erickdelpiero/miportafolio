@@ -15,7 +15,9 @@ async function loadComponent(componentName, targetElementId) {
         if (componentName === 'header') {
             setupHamburgerMenu();
             updateHeaderLinks(); // 👈 Función para actualizar enlaces
-            updateHeaderLogo(); // Función para actualizar logo header
+            updateHeaderLogoLink(); // Función para actualizar link del logo header
+            updateHeaderLogoImg(); // Función para actualizar el logo header
+
         }
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
@@ -28,20 +30,23 @@ function updateHeaderLinks() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
-        console.log('basePath')
-        console.log(basePath)
-        console.log('originalHref')
-        console.log(originalHref)
-        console.log('link.href')
-        console.log(link.href)
     });
 }
 
-// Actualiza los enlaces de logo del header
-function updateHeaderLogo() {
+// Actualiza el enlace del logo del header
+function updateHeaderLogoLink() {
     const menuLinks = document.querySelectorAll('.logo a');
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
+        link.href = `${basePath}${originalHref}`;
+    });
+}
+
+// Actualiza la imagen del logo del header
+function updateHeaderLogoImg() {
+    const menuLinks = document.querySelectorAll('.logo img');
+    menuLinks.forEach(link => {
+        const originalHref = link.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
     });
 }
