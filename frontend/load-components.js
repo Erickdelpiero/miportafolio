@@ -44,12 +44,12 @@ function updateHeaderLogoLink() {
 
 // Actualiza la imagen del logo del header
 function updateHeaderLogoImg() {
-    const menuLinks = document.querySelectorAll('.logo img');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
-        console.log('Imagen del logo:')
-        console.log(link.href)
+    const logoImages = document.querySelectorAll('.logo img');
+    logoImages.forEach(img => {
+        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
+        img.src = `${basePath}${originalSrc}`;
+        console.log('Imagen del logo:');
+        console.log(img.src);
     });
 }
 
