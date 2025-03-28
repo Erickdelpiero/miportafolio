@@ -1,3 +1,9 @@
+Note (0328V0)
+- Versión V1.0 funcional.
+- Funciona en el repositorio local y en web.
+- Sin optimizaciones de código por el momento.
+- Se cambió el logo a la derecha y el botón hamburguesa a la izquierda en el modo responsive.
+
 Note (0326V2)
 - Menu con botón hamburguesa en responsive.
 

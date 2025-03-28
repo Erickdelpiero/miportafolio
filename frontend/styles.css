@@ -355,14 +355,14 @@ footer {
 
     /* Mueve el logo junto al botón hamburguesa */
     .logo {
-        order: 1; /* Logo a la izquierda */
+        order: 2; /* Logo a la derecha */
         flex: 0; /* Evita que ocupe espacio innecesario */
     }
 
     /* Muestra el botón hamburguesa */
     .hamburger-btn {
         display: block; /* Muestra el botón */
-        order: 2; /* Botón a la derecha */
+        order: 1; /* Botón a la izquierda */
     }
 
     /* Oculta el menú normal */
@@ -376,7 +376,7 @@ footer {
         display: block;
         position: absolute;
         top: 90px; /* Ajusta según altura de tu header */
-        right: 20px;
+        left: 20px;
         background-color: #121212;
         border: 2px solid #ffffff;
         border-radius: 15px;
