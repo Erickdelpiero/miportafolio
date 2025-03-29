@@ -1,3 +1,6 @@
+Note (0328V3)
+- El commit (Script de todos los html) deja operativo el header y footer en todas las páginas web.
+
 Note (0328V2)
 - El commit (if=fooder) deja totalmente operativo el index.html en web.
 
