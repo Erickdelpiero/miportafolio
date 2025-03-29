@@ -17,9 +17,15 @@ async function loadComponent(componentName, targetElementId) {
             updateHeaderLinks(); // 👈 Función para actualizar enlaces
             updateHeaderLogoLink(); // Función para actualizar link del logo header
             updateHeaderLogoImg(); // Función para actualizar el logo header
+        }
+
+        if (componentName === 'footer') {
             updateFooterLinks(); // Función para actualizar los links del footer
             updateFooterLogoLink(); // Función para actualizar el link del logo
+            updateFooterLogoImg(); // Función actualizar la foto del logo
+            updateFooterLogoSocialImg(); // Función de actualizar la foto de Social
         }
+        
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
     }
