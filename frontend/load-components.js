@@ -31,6 +31,8 @@ function updateHeaderLinks() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
+        console.log('updateHeaderLinks');
+        console.log(link.href)
     });
 }
 
@@ -49,6 +51,8 @@ function updateHeaderLogoImg() {
     logoImages.forEach(img => {
         const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         img.src = `${basePath}${originalSrc}`;
+        console.log('updateHeaderLogoImg');
+        console.log(img.src)
     });
 }
 
@@ -58,6 +62,8 @@ function updateFooterLinks() {
     menuLinks.forEach(link => {
         const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
         link.href = `${basePath}${originalHref}`;
+        console.log('updateFooterLinks');
+        console.log(link.href);
     });
 }
 
@@ -83,6 +89,8 @@ function updateFooterLogoImg() {
     logoImages.forEach(img => {
         const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
         img.src = `${basePath}${originalSrc}`;
+        console.log('updateFooterLogoImg');
+        console.log(img.src)
     });
 }
 
