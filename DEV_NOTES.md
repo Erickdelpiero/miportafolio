@@ -1,3 +1,7 @@
+Note (0328V)
+- Merge de la optimization con main.
+- Versión V1.1 Funcional.
+
 Note (0328V0)
 - Versión V1.0 funcional.
 - Funciona en el repositorio local y en web.
