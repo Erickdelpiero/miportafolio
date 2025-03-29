@@ -1,115 +1,66 @@
-// Configuración de rutas
+// Configuración de rutas para local y GitHub Pages
 const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 const repoName = 'miportafolio';
 const basePath = isLocal ? '/' : `/${repoName}/`;
 
+/**
+ * Carga un componente HTML (header o footer) y lo inserta en el DOM
+ * @param {string} componentName - Nombre del componente ('header' o 'footer')
+ * @param {string} targetElementId - ID del elemento donde se insertará el componente
+ */
 async function loadComponent(componentName, targetElementId) {
     try {
         const componentPath = `${basePath}frontend/pages/components/${componentName}.html`;
         const response = await fetch(componentPath);
-        
         if (!response.ok) throw new Error(`Error ${response.status}`);
-        const html = await response.text();
-        document.getElementById(targetElementId).innerHTML = html;
 
+        document.getElementById(targetElementId).innerHTML = await response.text();
+        
         if (componentName === 'header') {
             setupHamburgerMenu();
-            updateHeaderLinks(); // 👈 Función para actualizar enlaces
-            updateHeaderLogoLink(); // Función para actualizar link del logo header
-            updateHeaderLogoImg(); // Función para actualizar el logo header
+            updateLinks('.menu a');
+            updateLinks('.logo a');
+            updateImages('.logo img');
         }
 
         if (componentName === 'footer') {
-            updateFooterLinks(); // Función para actualizar los links del footer
-            updateFooterLogoLink(); // Función para actualizar el link del logo
-            updateFooterLogoImg(); // Función actualizar la foto del logo
-            updateFooterLogoSocialImg(); // Función de actualizar la foto de Social
+            updateLinks('.footer-links a');
+            updateLinks('.footer-logo a');
+            updateImages('.footer-logo img');
+            updateImages('.footer-social img');
         }
-        
     } catch (error) {
         console.error(`Error al cargar ${componentName}:`, error);
     }
 }
 
-// Actualiza los enlaces del header
-function updateHeaderLinks() {
-    const menuLinks = document.querySelectorAll('.menu a');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
-        console.log('updateHeaderLinks');
-        console.log(link.href)
+/**
+ * Actualiza los enlaces dentro de un contenedor específico para que funcionen en local y en GitHub Pages
+ * @param {string} selector - Selector CSS de los enlaces a actualizar
+ */
+function updateLinks(selector) {
+    document.querySelectorAll(selector).forEach(link => {
+        if (link.hasAttribute('href')) {
+            link.href = `${basePath}${link.getAttribute('href').replace(/^\//, '')}`;
+        }
     });
 }
 
-// Actualiza el enlace del logo del header
-function updateHeaderLogoLink() {
-    const menuLinks = document.querySelectorAll('.logo a');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
+/**
+ * Actualiza las imágenes dentro de un contenedor específico para que funcionen en local y en GitHub Pages
+ * @param {string} selector - Selector CSS de las imágenes a actualizar
+ */
+function updateImages(selector) {
+    document.querySelectorAll(selector).forEach(img => {
+        if (img.hasAttribute('src')) {
+            img.src = `${basePath}${img.getAttribute('src').replace(/^\//, '')}`;
+        }
     });
 }
 
-// Actualiza la imagen del logo del header
-function updateHeaderLogoImg() {
-    const logoImages = document.querySelectorAll('.logo img');
-    logoImages.forEach(img => {
-        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
-        img.src = `${basePath}${originalSrc}`;
-        console.log('updateHeaderLogoImg');
-        console.log(img.src)
-    });
-}
-
-// Actualiza los enlaces del footer
-function updateFooterLinks() {
-    const menuLinks = document.querySelectorAll('.footer-links a');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
-        console.log('updateFooterLinks');
-        console.log(link.href);
-    });
-}
-
-// Actualiza el enlace del logo del footer
-function updateFooterLogoLink() {
-    const menuLinks = document.querySelectorAll('.footer-logo a');
-    menuLinks.forEach(link => {
-        const originalHref = link.getAttribute('href').replace(/^\//, ''); // Remueve el / inicial
-        link.href = `${basePath}${originalHref}`;
-        console.log('Link del Logo');
-        console.log('basePath');
-        console.log(basePath);
-        console.log('originalHref');
-        console.log(originalHref);
-        console.log('link.href');
-        console.log(link.href);
-    });
-}
-
-// Actualiza la imagen del logo del footer
-function updateFooterLogoImg() {
-    const logoImages = document.querySelectorAll('.footer-logo img');
-    logoImages.forEach(img => {
-        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
-        img.src = `${basePath}${originalSrc}`;
-        console.log('updateFooterLogoImg');
-        console.log(img.src)
-    });
-}
-
-// Actualiza la imagen del logo social del footer
-function updateFooterLogoSocialImg() {
-    const logoImages = document.querySelectorAll('.footer-social img');
-    logoImages.forEach(img => {
-        const originalSrc = img.getAttribute('src').replace(/^\//, ''); // Remueve el / inicial
-        img.src = `${basePath}${originalSrc}`;
-    });
-}
-
-// Función para configurar el botón hamburguesa
+/**
+ * Configura el botón de menú hamburguesa en móviles
+ */
 function setupHamburgerMenu() {
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     if (hamburgerBtn) {

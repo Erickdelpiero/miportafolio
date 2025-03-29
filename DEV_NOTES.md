@@ -1,3 +1,7 @@
+Note (0328V4)
+- Optimización del código js.
+- Funcional en web y local hasta (0328V3).
+
 Note (0328V3)
 - El commit (Script de todos los html) deja operativo el header y footer en todas las páginas web.
 
