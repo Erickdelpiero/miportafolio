@@ -1,3 +1,6 @@
+Note (0328V2)
+- El commit (if=fooder) deja totalmente operativo el index.html en web.
+
 Note (0327V1)
 - Implementación de basepath en load-components.js
 

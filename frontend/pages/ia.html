@@ -86,16 +86,6 @@
     <div id="footer-placeholder"></div>
 
     <!-- Script para cargar componentes -->
-    <script src="/frontend/load-components.js"></script>
-
-    <script>
-        document.querySelector('.hamburger-btn').addEventListener('click', function() {
-            const nav = document.querySelector('nav');
-            nav.classList.toggle('active');
-            
-            // Cambia el ícono de ☰ a ✕ cuando está activo
-            this.textContent = nav.classList.contains('active') ? '✕' : '☰';
-        });
-    </script>
+    <script src="../load-components.js"></script>
 </body>
 </html>
