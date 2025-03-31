@@ -1,3 +1,7 @@
+Note (0331V0)
+- Se actualizó algunas imágenes y se mejoró los nombres.
+- Se necesita poner los hipervínculos a los modelos.
+
 Note (0328V)
 - Merge de la optimization con main.
 - Versión V1.1 Funcional.
