@@ -108,11 +108,11 @@ nav { /*Mantiene el menú alineado a la derecha*/
 .btn {
     background-color: #0077B6;
     color: #FFFFFF;
-    padding: 7px 12px;
+    padding: 9px 15px;
     border-radius: 10px;
     text-decoration: none;
     transition: background 0.3s;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .btn:hover {
@@ -467,6 +467,65 @@ footer {
 
     .parrafo a{
         display:block;
+    }
+
+    .contenedor .parrafo .parrafobtn  {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente todos los elementos hijos */
+    }
+
+    .contenedor .parrafo .btn {
+        display: inline-block;
+        width: auto;
+        margin: 10px 0; /* Margen solo arriba/abajo (el centrado lo hace el padre) */
+        padding: 8px 20px;
+        text-align: center;
+    }
+
+    /* Orden forzado en responsive */
+    .contenido {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contenido .imagen,
+    .contenido .imagenV {
+        order: 1; /* Fuerza la imagen a aparecer primero */
+    }
+    
+    .contenido .parrafo {
+        order: 2; /* Fuerza el párrafo a aparecer después */
+    }
+
+    /* Estructura forzada para aboutme */
+    .hero-aboutme {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-aboutme .texto {
+        display: contents; /* Rompe el contenedor para ordenar hijos individualmente */
+    }
+    
+    .hero-aboutme h1 {
+        order: 1; /* Título primero */
+        margin-bottom: 20px; /* Espacio opcional */
+    }
+    
+    .hero-aboutme .imagen {
+        order: 2; /* Imagen segundo */
+        margin-bottom: 20px; /* Espacio opcional */
+    }
+    
+    .hero-aboutme p {
+        order: 3; /* Párrafo al final */
+        text-align: justify;
+    }
+    
+    .hero-aboutme .btn {
+        order: 4; /* Botón último (si lo necesitas) */
+        margin-top: 15px;
     }
 
     .footer-container {

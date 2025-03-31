@@ -1,3 +1,9 @@
+Note (0331V1)
+- Se mejoró el orden de imágenes y texto en el modo responsive.
+- Se agregó los hipervínculos necesarios.
+- Se modificó el tamaño de los botones.
+- Se agregó build.html
+
 Note (0331V0)
 - Se actualizó algunas imágenes y se mejoró los nombres.
 - Se necesita poner los hipervínculos a los modelos.
