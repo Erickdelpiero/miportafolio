@@ -1,3 +1,9 @@
+Note (0401V0)
+- Formulario funcional.
+- Falta poner * de obligatorio.
+- Mensaje de completar todos los campos faltante.
+- Falta eliminar los campos luego de enviado el email.
+
 Note (0331V1)
 - Se mejoró el orden de imágenes y texto en el modo responsive.
 - Se agregó los hipervínculos necesarios.
