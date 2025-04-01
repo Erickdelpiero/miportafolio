@@ -34,6 +34,10 @@ header {
     z-index: 1001;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Main*/
 main {
     margin-top: 80px; /*Evita que el header tape el contenido*/
@@ -407,6 +411,7 @@ footer {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         padding: 15px;
         z-index: 1001;
+        pointer-events: auto; /* Asegura que los clicks dentro del menú no se propaguen */
         /* Nuevas propiedades para ajustar el alto */
         min-height: 260px; /* Altura mínimo */
         overflow-y: auto; /* Permite scroll si el contenido es muy largo */

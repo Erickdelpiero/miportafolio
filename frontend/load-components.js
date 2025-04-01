@@ -63,11 +63,37 @@ function updateImages(selector) {
  */
 function setupHamburgerMenu() {
     const hamburgerBtn = document.querySelector('.hamburger-btn');
-    if (hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', function() {
-            const nav = document.querySelector('nav');
+    const nav = document.querySelector('nav');
+    
+    if (hamburgerBtn && nav) {
+        // Función para cerrar el menú
+        const closeMenu = () => {
+            nav.classList.remove('active');
+            hamburgerBtn.textContent = '☰';
+        };
+
+        // Evento del botón hamburguesa
+        hamburgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evita que el click se propague al documento
             nav.classList.toggle('active');
             this.textContent = nav.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Cerrar al hacer clic fuera del menú
+        document.addEventListener('click', (e) => {
+            const isClickInsideNav = nav.contains(e.target);
+            const isClickOnHamburger = hamburgerBtn.contains(e.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && nav.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // Cerrar al hacer scroll (opcional)
+        window.addEventListener('scroll', () => {
+            if (nav.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
 }

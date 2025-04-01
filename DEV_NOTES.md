@@ -1,3 +1,7 @@
+Note (0401V)
+- Versión V1.1 funcional.
+- Localmente funciona perfectamente, se procede al despliegue.
+
 Note (0401V1)
 - Formulario optimizado según las observaciones (0401V0)
 - Falta eliminar el menú al hacer click fuera en el modo responsive.
