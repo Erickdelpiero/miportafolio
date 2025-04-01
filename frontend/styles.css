@@ -113,12 +113,20 @@ nav { /*Mantiene el menú alineado a la derecha*/
     text-decoration: none;
     transition: background 0.3s;
     font-size: 25px;
+    cursor: pointer;
 }
 
 .btn:hover {
     color: #ffffff;
     background-color: #005a8d;
     box-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+
+/* Efecto active (al hacer clic) */
+.btn:active {
+    transform: translateY(0); /* Elimina el efecto de levitación */
+    box-shadow: none; /* Elimina la sombra */
 }
 
 /* Sección principal */
@@ -256,6 +264,22 @@ nav { /*Mantiene el menú alineado a la derecha*/
 
 .input-group textarea {
     resize: vertical;
+}
+
+/* Añade esto a tu archivo CSS */
+.input-group input:invalid,
+.input-group textarea:invalid {
+    border-color: #ff6b6b;
+}
+
+.input-group input:focus:invalid,
+.input-group textarea:focus:invalid {
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+.required {
+    color: #ff0000;
+    font-size: 0.8em;
 }
 
 /* Footer */

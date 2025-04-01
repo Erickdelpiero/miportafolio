@@ -1,3 +1,9 @@
+Note (0401V1)
+- Formulario optimizado según las observaciones (0401V0)
+- Falta eliminar el menú al hacer click fuera en el modo responsive.
+- Arreglar el texto.
+- Arreglar los hipervínculos exactos para los modelos.
+
 Note (0401V0)
 - Formulario funcional.
 - Falta poner * de obligatorio.

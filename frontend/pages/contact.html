@@ -15,19 +15,19 @@
             <h1>Contáctame</h1>
             <p>Si tienes alguna consulta o deseas más información, completa el siguiente formulario.</p>
             
-            <form action="#" method="post" class="contact-form">
+            <form action="#" method="post" class="contact-form" id="contactForm">
                 <div class="input-group">
-                    <label for="name">Nombre</label>
+                    <label for="name">Nombre<span class="required">*</span></label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="input-group">
-                    <label for="email">Correo Electrónico</label>
+                    <label for="email">Correo Electrónico<span class="required">*</span></label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="input-group">
-                    <label for="message">Mensaje</label>
+                    <label for="message">Mensaje<span class="required">*</span></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 
