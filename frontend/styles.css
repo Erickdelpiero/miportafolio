@@ -143,8 +143,8 @@ nav { /*Mantiene el menú alineado a la derecha*/
 
 /* Texto en la izquierda */
 .texto {
-    width: 57%;
-    margin: 10px;
+    width: 50%;
+    margin: 20px;
 }
 
 .texto h1 {
@@ -290,7 +290,7 @@ nav { /*Mantiene el menú alineado a la derecha*/
 footer {
     background-color: #121212;
     color: #BFC0C0;
-    padding: 40px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -301,7 +301,7 @@ footer {
     flex-wrap: wrap;
     max-width: 1500px;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #121212;
 }
 
@@ -364,16 +364,16 @@ footer {
 
 /* Línea inferior del footer */
 .footer-bottom {
-    margin-top: 20px;
+    margin-top: 10px;
     border-top: 1px solid #ffffff;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
 /* Responsividad */
 @media (max-width: 850px) {
     header {
-        padding: 15px 20px;
+        padding: 15px 15px;
         width: 95%;
         /* Mantiene el header en una sola línea */
         flex-direction: row;
@@ -403,8 +403,8 @@ footer {
     nav.active {
         display: block;
         position: absolute;
-        top: 90px; /* Ajusta según altura de tu header */
-        left: 20px;
+        top: 60px; /* Ajusta según altura de tu header */
+        left: 30px;
         background-color: #121212;
         border: 2px solid #ffffff;
         border-radius: 15px;
@@ -441,21 +441,23 @@ footer {
 
     .btn {
         margin-top: 10px;
+        font-size: 19px;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
     }
 
     .texto {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
 
     .texto h1 {
-        font-size: 50px;
+        font-size: 45px;
+        margin-bottom: 5px;
     }
     
     .texto p {
@@ -472,17 +474,18 @@ footer {
     }
 
     .titulo {
-        font-size: 35px;
-        margin-bottom: 20px; /* Espacio entre el título y el contenido */
+        font-size: 30px;
+        margin-bottom: 15px; /* Espacio entre el título y el contenido */
     }
 
     .contenedor {
-        padding-top: 80px;
+        padding-top: 10px;
+        padding-bottom: 0px;
     }
 
     .contenido {
         flex-direction: column; /* Cambia la dirección a vertical (arriba-abajo) */
-        gap: 30px; /* Espacio entre texto e imagen */
+        gap: 5px; /* Espacio entre texto e imagen */
     }
 
     .parrafo {

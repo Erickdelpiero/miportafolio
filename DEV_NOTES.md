@@ -1,3 +1,8 @@
+Note (0401V2)
+- Versión V1.2 funcional. (Mejoras estéticas respecto a V1.2)
+- Se modificó el padding y margen de varios elementos.
+- Se cambió la imagen inicial del index.html. (Más llamativa)
+
 Note (0401V)
 - Versión V1.1 funcional.
 - Localmente funciona perfectamente, se procede al despliegue.
